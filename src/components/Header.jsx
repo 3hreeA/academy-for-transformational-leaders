@@ -3,12 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "About", to: "/About" },
-  { label: "Projects", to: "/Projects" },
-  { label: "Programmes", to: "/Programmes" },
-  { label: "Sectors", to: "/Sectors" },
-  { label: "Members", to: "/Members" },
-  { label: "News", to: "/News" },
+  { label: "Who We Are", to: "/who-we-are" },
+  { label: "What We Do", to: "/what-we-do" },
+  { label: "Our Insights", to: "/our-insights" },
+  { label: "News & Events", to: "/news-events" },
 ];
 
 export default function Header() {

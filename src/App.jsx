@@ -6,13 +6,10 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Programmes from './pages/Programmes';
-import Sectors from './pages/Sectors';
-import Members from './pages/Members';
-import News from './pages/News';
-import Contact from './pages/Contact';
+import WhoWeAre from './pages/WhoWeAre';
+import WhatWeDo from './pages/WhatWeDo';
+import OurInsights from './pages/OurInsights';
+import NewsEvents from './pages/NewsEvents';
 import Layout from './components/Layout';
 // Add page imports here
 
@@ -40,13 +37,10 @@ const AuthenticatedApp = () => {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Projects" element={<Projects />} />
-        <Route path="/Programmes" element={<Programmes />} />
-        <Route path="/Sectors" element={<Sectors />} />
-        <Route path="/Members" element={<Members />} />
-        <Route path="/News" element={<News />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/who-we-are" element={<WhoWeAre />} />
+        <Route path="/what-we-do" element={<WhatWeDo />} />
+        <Route path="/our-insights" element={<OurInsights />} />
+        <Route path="/news-events" element={<NewsEvents />} />
         {/* Add your page Route elements here */}
       </Route>
       <Route path="*" element={<PageNotFound />} />

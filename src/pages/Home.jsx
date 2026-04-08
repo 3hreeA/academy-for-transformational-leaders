@@ -88,12 +88,12 @@ function Hero() {
             An international leadership network empowering professionals across sectors to drive collective good and global impact.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link to="/About">
+            <Link to="/who-we-are">
               <button className="bg-gold hover:bg-gold-dark text-white px-8 py-4 text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold/30">
                 Discover ATL
               </button>
             </Link>
-            <Link to="/Members">
+            <Link to="/news-events">
               <button className="border border-white/30 text-white/80 hover:border-white hover:text-white px-8 py-4 text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300">
                 Join the Network
               </button>
@@ -139,10 +139,10 @@ function Mission() {
           <p className="text-muted-foreground leading-relaxed mb-10">
             From higher education to business, governance to media, our network spans 15+ countries and continues to grow as a force for collective good.
           </p>
-          <Link to="/About">
-            <button className="group flex items-center gap-3 text-navy font-semibold text-sm border-b-2 border-gold pb-1 hover:gap-5 transition-all duration-300">
-              Our Story <ArrowRight className="w-4 h-4" />
-            </button>
+          <Link to="/who-we-are">
+          <button className="group flex items-center gap-3 text-navy font-semibold text-sm border-b-2 border-gold pb-1 hover:gap-5 transition-all duration-300">
+            Our Story <ArrowRight className="w-4 h-4" />
+          </button>
           </Link>
         </Reveal>
 
@@ -180,7 +180,7 @@ function Sectors() {
                 Four pillars where leadership creates the greatest ripple.
               </h2>
             </div>
-            <Link to="/Sectors" className="flex-shrink-0">
+            <Link to="/what-we-do" className="flex-shrink-0">
               <button className="group flex items-center gap-2 text-gold text-xs font-bold tracking-widest uppercase border-b border-gold/40 pb-1 hover:border-gold transition-all">
                 All Sectors <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
               </button>
@@ -276,7 +276,7 @@ function WhyJoin() {
               </li>
             ))}
           </ul>
-          <Link to="/Members">
+          <Link to="/news-events">
             <button className="bg-navy text-white hover:bg-navy-mid transition-all duration-300 px-8 py-4 text-[10px] font-bold tracking-[0.2em] uppercase hover:-translate-y-0.5">
               View Membership Options
             </button>
@@ -394,7 +394,7 @@ function CTA() {
           <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto">
             Join a global network of changemakers dedicated to reshaping their sectors and the world.
           </p>
-          <Link to="/Contact">
+          <Link to="/news-events">
             <button className="bg-gold hover:bg-gold-dark text-white px-10 py-5 text-[11px] font-bold tracking-[0.25em] uppercase transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-gold/30">
               Contact Us To Know More
             </button>

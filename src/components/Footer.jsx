@@ -2,18 +2,16 @@ import { Link } from "react-router-dom";
 import { MapPin, Mail, ArrowUpRight } from "lucide-react";
 
 const links = {
-  Platform: [
-    { label: "About ATL", to: "/About" },
-    { label: "Sectors", to: "/Sectors" },
-    { label: "Programmes", to: "/Programmes" },
-    { label: "Projects", to: "/Projects" },
-    { label: "Members", to: "/Members" },
-    { label: "News & Insights", to: "/News" },
+  Navigate: [
+    { label: "Who We Are", to: "/who-we-are" },
+    { label: "What We Do", to: "/what-we-do" },
+    { label: "Our Insights", to: "/our-insights" },
+    { label: "News & Events", to: "/news-events" },
   ],
   Connect: [
-    { label: "Contact Us", to: "/Contact" },
-    { label: "Apply for Membership", to: "/Members" },
-    { label: "ATL Pitch Den", to: "/Projects" },
+    { label: "Get In Touch", to: "/news-events" },
+    { label: "Apply for Membership", to: "/news-events" },
+    { label: "ATL Pitch Den", to: "/what-we-do" },
   ],
 };
 
@@ -65,7 +63,7 @@ export default function Footer() {
           <div className="lg:col-span-4">
             <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-gold mb-5">Join the Network</p>
             <p className="text-white/50 text-sm leading-relaxed mb-6">Connect with transformational leaders from across the globe. Your next chapter starts here.</p>
-            <Link to="/Contact">
+            <Link to="/news-events">
               <button className="group flex items-center gap-3 border border-gold text-gold hover:bg-gold hover:text-white transition-all duration-300 px-6 py-3 text-[10px] font-bold tracking-[0.2em] uppercase">
                 Get In Touch
                 <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
