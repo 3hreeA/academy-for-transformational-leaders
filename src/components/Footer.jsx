@@ -7,6 +7,7 @@ const links = {
     { label: "What We Do", to: "/what-we-do" },
     { label: "Our Insights", to: "/our-insights" },
     { label: "News & Events", to: "/news-events" },
+    { label: "Join Us", to: "/join-us" },
   ],
   Connect: [
     { label: "Get In Touch", to: "/news-events" },

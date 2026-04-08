@@ -10,6 +10,7 @@ import WhoWeAre from './pages/WhoWeAre';
 import WhatWeDo from './pages/WhatWeDo';
 import OurInsights from './pages/OurInsights';
 import NewsEvents from './pages/NewsEvents';
+import JoinUs from './pages/JoinUs';
 import Layout from './components/Layout';
 // Add page imports here
 
@@ -41,6 +42,7 @@ const AuthenticatedApp = () => {
         <Route path="/what-we-do" element={<WhatWeDo />} />
         <Route path="/our-insights" element={<OurInsights />} />
         <Route path="/news-events" element={<NewsEvents />} />
+        <Route path="/join-us" element={<JoinUs />} />
         {/* Add your page Route elements here */}
       </Route>
       <Route path="*" element={<PageNotFound />} />

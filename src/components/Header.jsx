@@ -7,6 +7,7 @@ const navLinks = [
   { label: "What We Do", to: "/what-we-do" },
   { label: "Our Insights", to: "/our-insights" },
   { label: "News & Events", to: "/news-events" },
+  { label: "Join Us", to: "/join-us" },
 ];
 
 export default function Header() {
