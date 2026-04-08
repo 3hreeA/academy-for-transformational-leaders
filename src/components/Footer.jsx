@@ -1,74 +1,86 @@
 import { Link } from "react-router-dom";
-import { MapPin } from "lucide-react";
+import { MapPin, Mail, ArrowUpRight } from "lucide-react";
+
+const links = {
+  Platform: [
+    { label: "About ATL", to: "/About" },
+    { label: "Sectors", to: "/Sectors" },
+    { label: "Programmes", to: "/Programmes" },
+    { label: "Projects", to: "/Projects" },
+    { label: "Members", to: "/Members" },
+    { label: "News & Insights", to: "/News" },
+  ],
+  Connect: [
+    { label: "Contact Us", to: "/Contact" },
+    { label: "Apply for Membership", to: "/Members" },
+    { label: "ATL Pitch Den", to: "/Projects" },
+  ],
+};
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-secondary-foreground">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-3 gap-12">
-        {/* Brand */}
-        <div>
-          <Link to="/" className="inline-block mb-5">
-            <img
-              src="https://media.base44.com/images/public/69d676e0211478cf568f8bc7/dcb6c81e0_atlglobal_org_ATL-Global-Logo-2-256x61_65470698.png"
-              alt="ATL Global"
-              className="h-10 w-auto object-contain brightness-0 invert"
-              onError={(e) => {
-                e.target.style.display = "none";
-                e.target.nextElementSibling.style.display = "inline";
-              }}
-            />
-            <span className="font-bold text-xl text-secondary-foreground" style={{ display: "none" }}>ATL Global</span>
-          </Link>
-          <p className="text-secondary-foreground/60 text-sm leading-relaxed max-w-xs">
-            An international leadership network empowering high-flying professionals to drive collective good and global impact.
-          </p>
-        </div>
-
-        {/* Navigation */}
-        <div>
-          <h4 className="text-secondary-foreground font-bold text-sm tracking-wider uppercase mb-5">Navigation</h4>
-          <nav>
-            <ul className="space-y-2.5">
-              <li><Link to="/" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Home</Link></li>
-              <li><Link to="/About" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">About Us</Link></li>
-              <li><Link to="/Projects" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Projects</Link></li>
-              <li><Link to="/Programmes" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Programmes</Link></li>
-              <li><Link to="/Sectors" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Sectors</Link></li>
-              <li><Link to="/Members" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Members</Link></li>
-              <li><Link to="/News" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">News</Link></li>
-              <li><Link to="/Contact" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Contact Us</Link></li>
-            </ul>
-          </nav>
-        </div>
-
-        {/* Get In Touch */}
-        <div>
-          <h4 className="text-secondary-foreground font-bold text-sm tracking-wider uppercase mb-5">Get In Touch</h4>
-          <div className="flex items-start gap-3 mb-5">
-            <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-            <p className="text-secondary-foreground/60 text-sm leading-relaxed">
-              Unit 82a James Carter Road, Mildenhall,<br />
-              Bury St. Edmunds, Suffolk,<br />
-              England, IP28 7DE
+    <footer className="bg-navy text-white">
+      {/* Top band */}
+      <div className="border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
+          {/* Brand col */}
+          <div className="lg:col-span-4">
+            <Link to="/" className="inline-block mb-6">
+              <img
+                src="https://media.base44.com/images/public/69d676e0211478cf568f8bc7/dcb6c81e0_atlglobal_org_ATL-Global-Logo-2-256x61_65470698.png"
+                alt="ATL Global"
+                className="h-10 w-auto brightness-0 invert"
+              />
+            </Link>
+            <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-8">
+              An international leadership network empowering high-flying professionals to drive collective good and global impact.
             </p>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
+                <p className="text-white/40 text-xs leading-relaxed">Unit 82a James Carter Road, Mildenhall, Bury St. Edmunds, Suffolk, England, IP28 7DE</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-gold flex-shrink-0" />
+                <a href="mailto:info@atlglobal.org" className="text-white/40 text-xs hover:text-gold transition-colors">info@atlglobal.org</a>
+              </div>
+            </div>
           </div>
-          <a href="#" className="inline-block bg-primary text-primary-foreground px-5 py-2 text-xs font-bold tracking-widest uppercase hover:opacity-90 transition-all duration-200 hover:-translate-y-0.5">
-            Find Out More
-          </a>
+
+          {/* Nav cols */}
+          {Object.entries(links).map(([group, items]) => (
+            <div key={group} className="lg:col-span-2">
+              <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-gold mb-5">{group}</p>
+              <ul className="space-y-3">
+                {items.map(item => (
+                  <li key={item.label}>
+                    <Link to={item.to} className="text-white/50 text-sm hover:text-white transition-colors duration-200">{item.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          {/* CTA col */}
+          <div className="lg:col-span-4">
+            <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-gold mb-5">Join the Network</p>
+            <p className="text-white/50 text-sm leading-relaxed mb-6">Connect with transformational leaders from across the globe. Your next chapter starts here.</p>
+            <Link to="/Contact">
+              <button className="group flex items-center gap-3 border border-gold text-gold hover:bg-gold hover:text-white transition-all duration-300 px-6 py-3 text-[10px] font-bold tracking-[0.2em] uppercase">
+                Get In Touch
+                <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-secondary-foreground/10">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-secondary-foreground/40 text-xs">
-            Copyright &copy; 2026 Built by{" "}
-            <a href="http://okayvc.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Okay</a>
-          </p>
-          <div className="flex items-center gap-5">
-            <a href="#" className="text-secondary-foreground/40 text-xs hover:text-primary transition-colors duration-200">Privacy Policy</a>
-            <a href="#" className="text-secondary-foreground/40 text-xs hover:text-primary transition-colors duration-200">Terms of Service</a>
-          </div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p className="text-white/25 text-xs">© 2026 ATL Global. Built by <a href="http://okayvc.com/" target="_blank" rel="noopener noreferrer" className="text-gold/60 hover:text-gold transition-colors">Okay</a></p>
+        <div className="flex items-center gap-6">
+          <a href="#" className="text-white/25 text-xs hover:text-white/50 transition-colors">Privacy Policy</a>
+          <a href="#" className="text-white/25 text-xs hover:text-white/50 transition-colors">Terms</a>
         </div>
       </div>
     </footer>
