@@ -6,10 +6,10 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import Home from './pages/Home';
-import WhoWeAre from './pages/WhoWeAre.jsx';
-import WhatWeDo from './pages/WhatWeDo.jsx';
-import OurInsights from './pages/OurInsights.jsx';
-import NewsEvents from './pages/NewsEvents.jsx';
+import WhoWeAre from './pages/WhoWeAre';
+import WhatWeDo from './pages/WhatWeDo';
+import OurInsights from './pages/OurInsights';
+import NewsEvents from './pages/NewsEvents';
 import Layout from './components/Layout';
 // Add page imports here
 
