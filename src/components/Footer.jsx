@@ -31,12 +31,12 @@ export default function Footer() {
             <ul className="space-y-2.5">
               <li><Link to="/" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Home</Link></li>
               <li><Link to="/About" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">About Us</Link></li>
-              <li><a href="#" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Projects</a></li>
-              <li><a href="#" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Programmes</a></li>
-              <li><a href="#" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Sectors</a></li>
-              <li><a href="#" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Members</a></li>
-              <li><a href="#" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">News</a></li>
-              <li><a href="#" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Contact Us</a></li>
+              <li><Link to="/Projects" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Projects</Link></li>
+              <li><Link to="/Programmes" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Programmes</Link></li>
+              <li><Link to="/Sectors" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Sectors</Link></li>
+              <li><Link to="/Members" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Members</Link></li>
+              <li><Link to="/News" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">News</Link></li>
+              <li><Link to="/Contact" className="text-secondary-foreground/60 text-sm hover:text-primary transition-colors duration-200">Contact Us</Link></li>
             </ul>
           </nav>
         </div>

@@ -17,12 +17,12 @@ export default function Header() {
   const navLinks = [
     { label: "Home", to: "/" },
     { label: "About Us", to: "/About" },
-    { label: "Projects", href: "#" },
-    { label: "Programmes", href: "#" },
-    { label: "Sectors", href: "#" },
-    { label: "Members", href: "#" },
-    { label: "News", href: "#" },
-    { label: "Contact Us", href: "#" },
+    { label: "Projects", to: "/Projects" },
+    { label: "Programmes", to: "/Programmes" },
+    { label: "Sectors", to: "/Sectors" },
+    { label: "Members", to: "/Members" },
+    { label: "News", to: "/News" },
+    { label: "Contact Us", to: "/Contact" },
   ];
 
   const isActive = (to) => to && location.pathname === to;
