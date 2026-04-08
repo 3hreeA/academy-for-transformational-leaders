@@ -53,9 +53,9 @@ export default function Header() {
 
           {/* CTA */}
           <div className="hidden lg:block">
-            <Link to="/Contact">
+            <Link to="/member-login">
               <button className="border border-gold text-gold hover:bg-gold hover:text-white transition-all duration-300 px-6 py-2.5 text-[10px] font-bold tracking-[0.2em] uppercase">
-                Contact Us
+                Member Login
               </button>
             </Link>
           </div>
@@ -81,9 +81,9 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <Link to="/Contact" className="mt-8">
+        <Link to="/member-login" className="mt-8">
           <button className="w-full border border-gold text-gold py-4 text-xs font-bold tracking-[0.2em] uppercase">
-            Contact Us
+            Member Login
           </button>
         </Link>
       </div>
