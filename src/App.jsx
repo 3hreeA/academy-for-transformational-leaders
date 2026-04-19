@@ -13,7 +13,6 @@ import NewsEvents from './pages/NewsEvents';
 import JoinUs from './pages/JoinUs';
 import MemberLogin from './pages/MemberLogin';
 import Layout from './components/Layout';
-import Clone1 from './pages/Clone1';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -46,7 +45,6 @@ const AuthenticatedApp = () => {
         <Route path="/news-events" element={<NewsEvents />} />
         <Route path="/join-us" element={<JoinUs />} />
         <Route path="/member-login" element={<MemberLogin />} />
-        <Route path="/clone1" element={<Clone1 />} />
         {/* Add your page Route elements here */}
       </Route>
       <Route path="*" element={<PageNotFound />} />
